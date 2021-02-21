@@ -1,0 +1,17 @@
+create database dblocadora;
+use dblocadora;
+
+create table tbveiculos(codigo int(4) not null auto_increment, marca varchar(30) not null, modelo varchar(40) not null, chassi varchar(30) not null, ano int(4) not null, primary key(codigo));
+create table tbclientes(codCliente int(4) not null auto_increment, nomeCliente varchar(60) not null, dataNascCliente varchar(10) not null, nacionalidade varchar(20) not null, sexo varchar(15) not null, endereco varchar(50) not null, primary key(codCliente));
+
+insert into tbclientes (nomeCliente, dataNascCliente, nacionalidade, sexo, endereco) VALUES ('Ademir','19/12/1998','Brasileira','Masculino','Av. JK');
+insert into tbclientes (nomeCliente, dataNascCliente, nacionalidade, sexo, endereco) VALUES ('Joao Marcelo','21/10/2005','Argentino','Masculino','Avenida de Mayo');
+insert into tbclientes (nomeCliente, dataNascCliente, nacionalidade, sexo, endereco) VALUES ('Luana','05/10/2000', 'Brasileira', 'Feminino','Av. das Rosas');
+
+insert into tbveiculos (marca, modelo, chassi, ano) VALUES ('Renault', 'Alpine Celebration','RAC-123', 2000);
+insert into tbveiculos (marca, modelo, chassi, ano) VALUES ('Lamborghini','Aventador SV','LASV-321', 2010);
+insert into tbveiculos (marca, modelo, chassi, ano) VALUES ('Koenigsegg', 'Jesko', 'KJ-159', 2004);
+
+show tables;
+select * from tbveiculos;
+select * from tbclientes;
